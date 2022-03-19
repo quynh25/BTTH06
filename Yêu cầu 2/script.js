@@ -1,3 +1,4 @@
+//tạo số ngẫu nhiên trong mảng
 function generateRandomNumber(){
     arr=[]
     for (let i =0; i<Math.floor(Math.random() *(20-10)) +10;i++){
@@ -7,9 +8,7 @@ function generateRandomNumber(){
     
     document.getElementById('addArray').innerHTML=arr.join(" , ");
 }
-
-
-
+//sắp xếp mảng
 function arrange(){
     arr= document.getElementById('addArray').innerHTML.split(',')
    if(document.getElementById('increase').checked == true){
@@ -22,8 +21,7 @@ function arrange(){
     }
 
 } 
-
-
+// thêm vị trí 
 function addLocation(){
     number= document.getElementById('number').value
     index= document.getElementById('index').value
