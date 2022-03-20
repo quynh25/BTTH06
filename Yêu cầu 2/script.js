@@ -25,10 +25,15 @@ function arrange(){
 function addLocation(){
     number= document.getElementById('number').value
     index= document.getElementById('index').value
-
-    arr= document.getElementById('addArrayChanged').innerHTML.split(' , ')
+    if(number!="" && index!=""){
+        arr= document.getElementById('addArrayChanged').innerHTML.split(' , ')
     
-    arr.splice( index, 0, number)
-    document.getElementById('addArrayChanged').innerHTML=arr.join(" , ");
+        arr.splice( index, 0, number)
+        document.getElementById('addArrayChanged').innerHTML=arr.join(" , ");
+    }
+    else{
+        alert("Điền đầy đủ thông tin vào")
+    }
+   
 }
 
