@@ -1,4 +1,4 @@
-//tạo số ngẫu nhiên trong mảng
+//tạo số ngẫu nhiên
 function generateRandomNumber(){
     arr=[]
     for (let i =0; i<Math.floor(Math.random() *(20-10)) +10;i++){
@@ -8,9 +8,11 @@ function generateRandomNumber(){
     
     document.getElementById('addArray').innerHTML=arr.join(" , ");
 }
-//sắp xếp mảng
+
+//sắp xếp
+
 function arrange(){
-    arr= document.getElementById('addArray').innerHTML.split(',')
+    arr= document.getElementById('addArray').innerHTML.split(",")
    if(document.getElementById('increase').checked == true){
         arr.sort(function(a, b){return a - b});
         document.getElementById('addArrayChanged').innerHTML=arr;
@@ -21,14 +23,19 @@ function arrange(){
     }
 
 } 
-// thêm vị trí 
+//thêm vị trí
 function addLocation(){
     number= document.getElementById('number').value
     index= document.getElementById('index').value
 
-    arr= document.getElementById('addArrayChanged').innerHTML.split(' , ')
-    
-    arr.splice( index, 0, number)
-    document.getElementById('addArrayChanged').innerHTML=arr.join(" , ");
+  
+    if(number!="" && index!=""){
+        arr= document.getElementById('addArrayChanged').innerHTML.split(",")
+        arr.splice( index, 0, number)
+        document.getElementById('addArrayChanged').innerHTML=arr.join(", ");
+    }
+    else{
+       alert("Điền đầy đủ thông tin vào")
+    }
 }
 
