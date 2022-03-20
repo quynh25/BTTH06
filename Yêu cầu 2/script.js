@@ -6,7 +6,7 @@ function generateRandomNumber(){
         
     }
     
-    document.getElementById('addArray').innerHTML=arr.join(", ");
+    document.getElementById('addArray').innerHTML=arr.join(" , ");
 }
 
 //sắp xếp
