@@ -6,13 +6,15 @@ body{
     margin: 100px 450px ;
     
 }
-table{
+
+.container table{
     height: 150px;
     width: 500px;
     margin: 10px 50px;
    
 }
-table, tr, td{
+
+.container table, tr, td{
     
     border: solid 0.5px blue;
     border-collapse: collapse;
