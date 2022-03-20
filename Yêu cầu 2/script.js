@@ -6,13 +6,13 @@ function generateRandomNumber(){
         
     }
     
-    document.getElementById('addArray').innerHTML=arr.join(" ,");
+    document.getElementById('addArray').innerHTML=arr.join(", ");
 }
 
 //sắp xếp
 
 function arrange(){
-    arr= document.getElementById('addArray').innerHTML.split(", ")
+    arr= document.getElementById('addArray').innerHTML.split(",")
    if(document.getElementById('increase').checked == true){
         arr.sort(function(a, b){return a - b});
         document.getElementById('addArrayChanged').innerHTML=arr;
